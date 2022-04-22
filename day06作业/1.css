@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+body {
+  max-width: 750px;
+  min-width: 350px;
+  margin: 0 auto;
+  padding: 0.2rem;
+}
+header {
+  width: 100%;
+  margin: 0 auto;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.3rem;
+}
+header .span2 {
+  margin-left: 2.5rem;
+}
+.box1 {
+  margin-top: 0.2rem;
+  width: 7.5rem;
+  height: 3rem;
+  border: 0.01rem solid #cecece;
+  font-size: 0.4rem;
+  padding: 0.2rem;
+  border-radius: 5%;
+  box-shadow: 2px 2px 2px 2px #ccc;
+}
+.box1 div {
+  margin-top: 0.2rem;
+}
+.bx {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.2rem;
+  margin: 0.2rem 0;
+  width: 7.5rem;
+  height: 0.2rem;
+}
