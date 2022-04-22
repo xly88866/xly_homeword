@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            
+        }
+        .box1{
+            border: 1px solid #8f8d8d;
+            width: 300px;
+            line-height: 40px;
+            height: 40px;
+            background-color: rgb(182, 182, 182);
+        }
+        ul{
+            border: 1px solid #8f8d8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">播放列表...</div>
+        <ul>
+            <li><a>玩家之徒-蔡依林 </a></li>
+            <li><a>原谅我就是这样的女生-戴佩妮 </a></li>
+            <li><a>猜不透-叮当 </a></li>
+            <li><a>自导自演-周杰伦 </a></li>
+            <li><a>浪漫窝-璇子 </a></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    let box1=document.querySelector(".box1")
+    let ul=document.querySelector("ul")
+    box1.onclick=function(){
+        ul.style.display = ul.style.display == "none" ? "block" : "none";
+    }
+</script>

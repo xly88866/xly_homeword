@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id=""><span>输入数字求和，数字之间用半角","号分隔</span><br>
+    <button>求和</button>
+    <strong class="son"></strong>
+</body>
+</html>
+<script>
+    let inp=document.querySelector("input")
+    let btn=document.querySelector("button")
+    let son=document.querySelector(".son")
+    inp.onkeyup=function(){
+        console.log(this.value);
+        /* 此处涉及replace()函数的应用和正则表达式的应用*/
+		this.value = this.value.replace(/[^(\d)|(,)]/,"")
+    }
+    btn.onclick=function(){
+        var sun=0
+        let inp=document.querySelector("input").value.split(",")
+        console.log(inp);
+        for(var i in inp){
+            console.log(i);
+            sun+=parseInt(inp[i])
+        }
+        son.innerHTML=sun
+    }
+    
+</script>
+<style>
+    span{
+        font-size: 12px;
+        color: #dedede;
+    }
+</style>

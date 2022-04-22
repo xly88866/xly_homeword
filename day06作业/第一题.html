@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 450px;
+            height: 600px;
+            background-color: rgb(194, 194, 194);
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        .box1-1{
+            width: 50px;
+            margin: 1.4rem 3rem;
+            height: 50px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        .box2{
+            border: 1px solid rgb(228, 228, 228);
+            display: none;
+            margin: 0 auto;
+            width: 200px;
+            height: 100px;
+        }
+        .a{
+            width: 50px;
+            text-align: center;
+            margin: 1.4rem 3rem;
+            height: 50px;
+            background-color: blue;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box1-1">
+            <div>1</div>
+            <div>JAN</div>
+        </div>
+        <div class="box1-1">
+            <div>2</div>
+            <div>FER</div>
+        </div>
+        <div class="box1-1">
+            <div>3</div>
+            <div>MAR</div>
+        </div>
+        <div class="box1-1">
+            <div>4</div>
+            <div>APR</div>
+        </div>
+        <div class="box1-1">
+            <div>5</div>
+            <div>MAY</div>
+        </div>
+        <div class="box1-1">
+            <div>6</div>
+            <div>JUN</div>
+        </div>
+        <div class="box1-1">
+            <div>7</div>
+            <div>JUL</div>
+        </div>
+        <div class="box1-1">
+            <div>8</div>
+            <div>AUG</div>
+        </div>
+        <div class="box1-1">
+            <div>9</div>
+            <div>SEP</div>
+        </div>
+        <div class="box1-1">
+            <div>10</div>
+            <div>OCT</div>
+        </div>
+        <div class="box1-1">
+            <div>11</div>
+            <div>NOV</div>
+        </div>
+        <div class="box1-1">
+            <div>12</div>
+            <div>DEC</div>
+        </div>
+
+
+        <div class="box2" style="display: block;">
+           <div> 1 月节日</div>
+            <div>元旦:1月1日至3日放假三天。</div>
+        </div>
+        <div class="box2">
+           <div> 2 月节日</div>
+            <div>春节:2月2日至8日放假7天。</div>
+        </div>
+        <div class="box2">
+           <div> 3 月节日</div>
+            <div>妇女节：3月8日妇女节，与我无关 。</div>
+        </div>
+        <div class="box2">
+           <div> 4 月节日</div>
+            <div>清明节：4月3日至5日放假3天。</div>
+        </div>
+        <div class="box2">
+           <div>5 月节日</div>
+            <div>劳动节：4月30日至5月2日放假3天。</div>
+        </div>
+        <div class="box2">
+           <div> 6 月节日</div>
+            <div>端午节：6月4日至6日放假3天。</div>
+        </div>
+        <div class="box2">
+           <div> 7 月节日</div>
+            <div>小暑：7月7日小暑。不放假。</div>
+        </div>
+        <div class="box2">
+           <div>8 月节日</div>
+            <div>七夕节：8月6日七夕节。不放假。</div>
+        </div>
+        <div class="box2">
+           <div> 9 月节日</div>
+            <div>中秋节：9月10日至12日放假3天。。</div>
+        </div>
+        <div class="box2">
+           <div> 10 月节日</div>
+            <div>国庆节：10月1日至7日放假7天。</div>
+        </div>
+        <div class="box2">
+           <div>11 月节日</div>
+            <div>立冬：11月8日立冬。不放假。</div>
+        </div>
+        <div class="box2">
+           <div> 12 月节日</div>
+            <div>废除奴隶制国际日:12月2日。</div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let box1=document.querySelectorAll(".box1-1")
+    let box2=document.querySelectorAll(".box2")
+
+    for(var i=0;i<i<box1.length;i++){
+        console.log(i);
+        box1[i].index=i
+        box1[i].onmouseover=function(){
+            for(var j=0;j<box1.length;j++){
+                box1[j].className="box1-1"
+                box2[j].style.display="none"
+            }
+            this.className="a"
+            box2[this.index].style.display="block"
+        }
+    }
+</script>
