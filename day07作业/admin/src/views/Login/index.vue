@@ -3,7 +3,6 @@
         <div class="box1">
             <h3>电商管理后台</h3>
             <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules">
-        <!-- 用户名 -->
         <el-form-item prop="username">
           <el-input
             prefix-icon="iconfont icon-user-fill"
@@ -12,7 +11,6 @@
           ></el-input>
         </el-form-item>
 
-        <!-- 密码 -->
         <el-form-item prop="password">
           <el-input
             show-password
@@ -23,8 +21,7 @@
           ></el-input>
         </el-form-item>
 
-        <!-- 按钮 -->
-        <el-form-item class="login_form_btns">
+        <el-form-item>
           <el-button type="primary" @click="goLogin">登录</el-button>
           <el-button type="info">重置</el-button>
         </el-form-item>
@@ -38,17 +35,13 @@ import { LoginApi } from '../../http/api.js'
 export default {
   data() {
     return {
-      //表单绑定的数据
       loginForm: {
         username: 'admin',
         password: '123456'
       },
-      //表单验证规则
       loginFormRules: {
         username: [
-          //判空处理
           { required: true, message: '请输入用户名', trigger: 'blur' },
-          //字符长度处理
           {
             min: 5,
             max: 20,
@@ -57,9 +50,7 @@ export default {
           }
         ],
         password: [
-          //判空处理
           { required: true, message: '请输入密码', trigger: 'blur' },
-          //字符长度处理
           {
             min: 5,
             max: 20,
@@ -71,12 +62,10 @@ export default {
     }
   },
   methods: {
-    //登录
     goLogin() {
       console.log('login')
       this.$refs.loginFormRef.validate(async (valid) => {
         if (!valid) return false
-        //开始调用后台登录接口
         const res = await LoginApi(this.loginForm)
         console.log('是否登录成功：', res)
         this.$router.push('/home')
